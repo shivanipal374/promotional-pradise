@@ -1,63 +1,82 @@
-<<<<<<< HEAD
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Promotional Pradise
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This is a dynamic 5-page website built with **Laravel 10** and **PHP 8.2**, designed to showcase company services, gallery, and manage client contacts. It includes a simple admin panel to manage content.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## 🔹 Database Setup & Migration
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+1. Create a new database (e.g., `promotional_pradise`) in your local MySQL.
+2. Update your `.env` file with database credentials:
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+```env
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=promotional_pradise
+DB_USERNAME=root
+DB_PASSWORD=
+Run migrations to create all tables (including status column for Services):
+php artisan migrate
+Link storage folder (for images uploaded by admin):
+php artisan storage:link
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Now your database is ready and all tables are created. You can start the server:
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
-=======
-# promotional-pradise
->>>>>>> 393b56969bd592433d22153d54b7dfe99adc011e
+php artisan serve
+🔹 Admin Panel Access
+URL: http://127.0.0.1:8000/admin/login
+Email: admin@gmail.com
+Password: 123456
+🛠 Project Requirements
+PHP Version: 8.2+
+Laravel Version: 10+
+Database: MySQL
+Web Server: XAMPP / Apache
+Image Processing: Intervention Image (for .webp conversion)
+🌐 Website Pages
+Home: Landing page with hero section, stats, and overview.
+About: Static page describing the company.
+Services: Dynamic page fetching services from database with images and descriptions.
+Gallery: Dynamic page showing gallery images uploaded via admin panel.
+Contact: Contact form storing submissions in the database.
+🔑 Admin Panel Features
+Login/Logout System
+Manage Services
+Add new service with title, description, and image
+Edit existing services
+Delete services
+Status: Active / Inactive toggle for each service
+Manage Gallery
+Upload images
+Delete images
+View Contact Form Submissions
+🖼 Image Upload
+All images uploaded in Services and Gallery are automatically converted to .webp format for better performance.
+Images are stored in:
+storage/app/public/services
+storage/app/public/gallery
+⚙ Installation Steps
+Clone the repository:
+git clone https://github.com/shivanipal374/promotional-pradise.git
+cd promotional-pradise/paradise
+Install dependencies:
+composer install
+npm install
+npm run dev
+Setup environment file:
+cp .env.example .env
+php artisan key:generate
+Configure database in .env file (see Database Setup above).
+Run migrations & storage link:
+php artisan migrate
+php artisan storage:link
+Start development server:
+php artisan serve
+✅ Additional Notes
+Admin can toggle status (active/inactive) for services, which reflects on the frontend dynamically.
+Contact form submissions are stored in the contacts table and can be viewed via admin panel.
+All pages are responsive and built with Bootstrap 5.3.
+Images are automatically optimized using Intervention Image.
