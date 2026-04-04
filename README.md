@@ -6,7 +6,7 @@ This is a dynamic 5-page website built with **Laravel 10** and **PHP 8.2**, desi
 
 ## 🔹 Database Setup & Migration
 
-### Database Setup
+
 
 1. Create a new database (e.g., `promotional_pradise`) in your local MySQL.
 2. Update your `.env` file with database credentials:
