@@ -18,11 +18,11 @@ class ParadiseController extends Controller
         return back()->with('success','Contact information saved succesfully');
     }
     //admin code
-    public function index()
-{
-    $contacts = Contact::latest()->get();
+        public function index()
+    {
+        $contacts = Contact::orderBy('id', 'asc')->get();
 
-    return view('admin.admincontact', compact('contacts'));
-}
+        return view('admin.admincontact', compact('contacts'));
+    }
 
 }

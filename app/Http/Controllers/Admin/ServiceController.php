@@ -18,19 +18,14 @@ class ServiceController extends Controller
     public function status($id)
  {
     $service = Service::findOrFail($id);
-
-    // toggle status (1 -> 0, 0 -> 1)
     $service->status = $service->status == 1 ? 0 : 1;
-
     $service->save();
-
     return back()
     ->with('success', 'Status updated successfully');
  }
     public function userindex(){
     
         $services = Service::where('status', 1)->latest()->get();
-
         return view('serviceindex', compact('services'));
     }
      public function create(){
@@ -47,8 +42,7 @@ class ServiceController extends Controller
 
     // Image read and encode
     $image = Image::read($file)->toWebp(90);
-
-    // Sahi storage path aur content save karna
+    
     Storage::disk('public')->put('services/' . $name, (string)$image);
 
     Service::create([
