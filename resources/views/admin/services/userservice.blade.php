@@ -21,7 +21,7 @@
             <!-- Table Head -->
             <thead class="table-light">
                <tr>
-                  <th>#</th>
+                  <th>Id</th>
                   <th class="text-start">Title</th>
                   <th>Image</th>
                   <th>Status</th>

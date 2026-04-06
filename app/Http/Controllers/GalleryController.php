@@ -43,18 +43,16 @@ class GalleryController extends Controller
 
         return redirect('/admin/gallery')->with('success','Image uploaded');
     }
-    public function edit($id)
-        {
-            $image = Gallery::findOrFail($id);
-
-            return view('admin.gallery.editimage', compact('image'));
-        }
+    public function edit($id){
+        $image = Gallery::findOrFail($id);
+        return view('admin.gallery.editimage', compact('image'));
+    }
     public function update(Request $request, $id){
         $gallery = Gallery::findOrFail($id); 
 
         if($request->hasFile('image')){
 
-        // old delete (FIX path भी)
+        // old delete
         Storage::disk('public')->delete('gallery/'.$gallery->image);
 
         $file = $request->file('image');

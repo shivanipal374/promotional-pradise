@@ -7,7 +7,7 @@
             <!-- Header -->
             <div class="card-header text-white text-center"
                style="background: #000; border-bottom: 1px solid #ddd;">
-               <h5 class="mb-0">📸 Upload New Image</h5>
+               <h5 class="mb-0"> Upload New Image</h5>
                <style>
                   .black-btn {
                   background: #000;

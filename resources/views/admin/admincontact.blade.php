@@ -7,7 +7,7 @@
          <table class="table table-hover align-middle mb-0 text-center">
             <thead class="table-dark">
                <tr>
-                  <th>#</th>
+                  <th>Id</th>
                   <th class="text-start">Name</th>
                   <th>Email</th>
                   <th>Phone</th>

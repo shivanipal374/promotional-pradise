@@ -24,8 +24,6 @@ Route::middleware('admin')->group(function () {
     Route::get('/admin/dashboard', function () {
         return view('admin.dashboard');
     });
-    
-    
     Route::view('/servicelisting', 'userservice');
     Route::get('/admin/service', [ServiceController::class, 'index'])->name('admin.service.index');
     Route::post('admin/service/status/{id}', [ServiceController::class, 'status'])
@@ -38,7 +36,6 @@ Route::middleware('admin')->group(function () {
     //contacts route
     Route::get('/admin/contacts', [ParadiseController::class, 'index']);
     //gallery route
-    Route::get('/gallery', [GalleryController::class, 'indexuser'])->name('gallery');
     Route::get('/admin/gallery', [GalleryController::class, 'index'])->name('admin.gallery');
     Route::post('/admin/gallery', [GalleryController::class, 'store']);
     Route::get('/admin/gallery/create', [GalleryController::class, 'create'])->name("gallery.create");
@@ -48,3 +45,4 @@ Route::middleware('admin')->group(function () {
     ->name('admin.gallery.update');
     Route::delete('/admin/gallery/delete/{id}', [GalleryController::class, 'destroy'])->name("admin.delete");
 });
+ Route::get('/gallery', [GalleryController::class, 'indexuser'])->name('gallery');
