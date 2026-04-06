@@ -1,6 +1,6 @@
 # Promotional Pradise
 
-This is a dynamic 5-page website built with **Laravel 10** and **PHP 8.2**, designed to showcase company services, gallery, and manage client contacts. It includes a simple admin panel to manage content.
+This is a dynamic 5-page website built with **Laravel 12** and **PHP 8.2**, designed to showcase company services, gallery, and manage client contacts. It includes a simple admin panel to manage content.
 
 ---
 
