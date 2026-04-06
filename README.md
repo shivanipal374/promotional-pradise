@@ -2,7 +2,11 @@
 
 This is a dynamic 5-page website built with **Laravel 12** and **PHP 8.2**, designed to showcase company services, gallery, and manage client contacts. It includes a simple admin panel to manage content.
 
----
+---🛠 Project Requirements
+PHP Version: 8.2+
+Laravel Version: 10+
+Database: MySQL
+Web Server: XAMPP / Apache
 
 ## 🔹 Database Setup & Migration
 
@@ -30,11 +34,6 @@ php artisan serve
 URL: http://127.0.0.1:8000/admin/login
 Email: admin@gmail.com
 Password: 123456
-🛠 Project Requirements
-PHP Version: 8.2+
-Laravel Version: 10+
-Database: MySQL
-Web Server: XAMPP / Apache
 Image Processing: Intervention Image (for .webp conversion)
 🌐 Website Pages
 Home: Landing page with hero section, stats, and overview.
